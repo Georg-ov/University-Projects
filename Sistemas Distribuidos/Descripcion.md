@@ -1,8 +1,8 @@
-# EasyCab (2024/2025)
+# 🚕 EasyCab (2024/2025)
 
 **EasyCab** es un proyecto académico dividido en dos versiones, cuyo objetivo es desarrollar un sistema distribuido para la gestión de una flota de taxis autónomos en una ciudad simulada.
 
-## Versión 1
+## 🧩 Versión 1
 En la primera versión se implementan los fundamentos del sistema utilizando:
 - Sockets TCP
 - Colas de eventos (Kafka)
@@ -13,7 +13,7 @@ Incluye componentes como:
 - Taxis autónomos con sensores simulados
 - Una central de control que gestiona y coordina los servicios
 
-## Versión 2
+## 🔐 Versión 2
 La segunda versión amplía la funcionalidad incorporando:
 - Servicios RESTful
 - Mecanismos de seguridad:
