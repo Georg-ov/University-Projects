@@ -1,0 +1,25 @@
+{
+  "name": "example-basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "version": "vinxi version"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/start": "^1.0.11",
+    "solid-app-router": "^0.4.2",
+    "solid-js": "^1.9.2",
+    "solid-start": "^0.3.11",
+    "vinxi": "^0.4.3",
+    "vite-plugin-solid": "^2.11.0"
+  },
+  "overrides": {
+    "vite": "5.4.10"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

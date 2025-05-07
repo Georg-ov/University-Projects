@@ -1,0 +1,5 @@
+He desplegado la app como una pwa en Firebase utilizando los comandos 'npm run build' y 'firebase deploy',
+en el archivo manifest.json he configurado que el nombre sea FREEWORLD y que de icono tenga una bandera de España.
+
+También he implementado las notificaciones push y he subido un video a google drive demostrando su funcionamiento,
+link de google drive: https://drive.google.com/file/d/1T9w8Bpobp1yAi1kUDy-BiSA7dKNffIPX/view?usp=sharing
