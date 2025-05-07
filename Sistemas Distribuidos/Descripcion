@@ -1,0 +1,8 @@
+EasyCab es un proyecto académico con dos versiones,cuyo objetivo es desarrollar un sistema distribuido para la gestión de una flota de taxis
+autónomos sobre una ciudad simulada.
+En la primera versión se implementan los fundamentos del sistema usando sockets, colas de eventos (Kafka), y un diseño modular distribuido
+con clientes, taxis con sensores y una central de control. La segunda versión amplía esta base incorporando servicios REST, mecanismos
+de seguridad (autenticación, cifrado, auditoría), integración con APIs externas como OpenWeather y un frontend web que
+muestra el estado del sistema en tiempo real. 
+El proyecto ha sido desarrollado en Python e incorpora cifrado bidireccional basado en AES para garantizar la confidencialidad de las 
+comunicaciones.
