@@ -1,0 +1,493 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "API Edificio Inteligente",
+    "description" : "API para la gestión de salas, niveles, dispositivos y notificaciones en un edificio inteligente.",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8080/api",
+    "description" : "Servidor local de pruebas"
+  } ],
+  "paths" : {
+    "/salas" : {
+      "post" : {
+        "summary" : "Crear una nueva sala",
+        "operationId" : "crearSala",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Sala"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Sala creada con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    },
+    "/salas/{codigoSala}" : {
+      "get" : {
+        "summary" : "Consultar una sala por código",
+        "operationId" : "consultarSala",
+        "parameters" : [ {
+          "name" : "codigoSala",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Detalles de la sala",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Sala"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Sala no encontrada"
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Modificar una sala existente",
+        "operationId" : "modificarSala",
+        "parameters" : [ {
+          "name" : "codigoSala",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Sala"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Sala modificada con éxito"
+          },
+          "404" : {
+            "description" : "Sala no encontrada"
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Borrar una sala",
+        "operationId" : "borrarSala",
+        "parameters" : [ {
+          "name" : "codigoSala",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Sala eliminada con éxito"
+          },
+          "404" : {
+            "description" : "Sala no encontrada"
+          }
+        }
+      }
+    },
+    "/niveles" : {
+      "post" : {
+        "summary" : "Crear un nuevo nivel",
+        "operationId" : "crearNivel",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Nivel"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Nivel creado con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    },
+    "/niveles/{nivel}" : {
+      "get" : {
+        "summary" : "Consultar un nivel por ID",
+        "operationId" : "consultarNivel",
+        "parameters" : [ {
+          "name" : "nivel",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Detalles del nivel",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Nivel"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Nivel no encontrado"
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Modificar un nivel existente",
+        "operationId" : "modificarNivel",
+        "parameters" : [ {
+          "name" : "nivel",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Nivel"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Nivel modificado con éxito"
+          },
+          "404" : {
+            "description" : "Nivel no encontrado"
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Borrar un nivel",
+        "operationId" : "borrarNivel",
+        "parameters" : [ {
+          "name" : "nivel",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Nivel eliminado con éxito"
+          },
+          "404" : {
+            "description" : "Nivel no encontrado"
+          }
+        }
+      }
+    },
+    "/dispositivos" : {
+      "post" : {
+        "summary" : "Crear un nuevo dispositivo",
+        "operationId" : "crearDispositivo",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Dispositivo"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Dispositivo creado con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    },
+    "/dispositivos/{codigo}" : {
+      "get" : {
+        "summary" : "Consultar un dispositivo por código",
+        "operationId" : "consultarDispositivo",
+        "parameters" : [ {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Detalles del dispositivo",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Dispositivo"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Dispositivo no encontrado"
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Modificar un dispositivo existente",
+        "operationId" : "modificarDispositivo",
+        "parameters" : [ {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Dispositivo"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Dispositivo modificado con éxito"
+          },
+          "404" : {
+            "description" : "Dispositivo no encontrado"
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Borrar un dispositivo",
+        "operationId" : "borrarDispositivo",
+        "parameters" : [ {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Dispositivo eliminado con éxito"
+          },
+          "404" : {
+            "description" : "Dispositivo no encontrado"
+          }
+        }
+      }
+    },
+    "/notificaciones/presencia" : {
+      "post" : {
+        "summary" : "Notificar presencia en una sala",
+        "operationId" : "notificarPresenciaSala",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/NotificacionPresencia"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Notificación enviada con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    },
+    "/notificaciones/usuario-valido" : {
+      "post" : {
+        "summary" : "Notificar a un usuario si es válido",
+        "operationId" : "notificarUsuarioValido",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/notificaciones_usuariovalido_body"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Notificación enviada con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    },
+    "/notificaciones/error" : {
+      "post" : {
+        "summary" : "Notificar un error a un usuario",
+        "operationId" : "notificarError",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/notificaciones_error_body"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Notificación enviada con éxito"
+          },
+          "400" : {
+            "description" : "Error en la solicitud"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Sala" : {
+        "type" : "object",
+        "properties" : {
+          "codigoSala" : {
+            "type" : "integer"
+          },
+          "nombre" : {
+            "type" : "string"
+          },
+          "nivel" : {
+            "type" : "integer"
+          }
+        },
+        "example" : {
+          "codigoSala" : 0,
+          "nombre" : "nombre",
+          "nivel" : 6
+        }
+      },
+      "Nivel" : {
+        "type" : "object",
+        "properties" : {
+          "nivel" : {
+            "type" : "integer"
+          },
+          "descripcion" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "descripcion" : "descripcion",
+          "nivel" : 0
+        }
+      },
+      "Dispositivo" : {
+        "type" : "object",
+        "properties" : {
+          "codigo" : {
+            "type" : "integer"
+          },
+          "descripcion" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "descripcion" : "descripcion",
+          "codigo" : 0
+        }
+      },
+      "NotificacionPresencia" : {
+        "type" : "object",
+        "properties" : {
+          "codigoSala" : {
+            "type" : "string"
+          }
+        }
+      },
+      "notificaciones_usuariovalido_body" : {
+        "type" : "object",
+        "properties" : {
+          "nif" : {
+            "type" : "string"
+          }
+        }
+      },
+      "notificaciones_error_body" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "nif" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/ControlPresencia/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ControlPresencia" targetNamespace="http://www.example.org/ControlPresencia/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/ControlPresencia/">
+      <xsd:element name="registrar">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="nif" type="xsd:string" />
+          	<xsd:element name="codigosala" type="xsd:int"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="eliminar">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="nif" type="xsd:string"></xsd:element>
+      			<xsd:element name="codigosala" type="xsd:int"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="eliminarResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="controlEmpleadosSala">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="xsd:int"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="controlEmpleadosSalaResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="registrarRequest">
+    <wsdl:part element="tns:registrar" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="registrarResponse">
+    <wsdl:part element="tns:registrarResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="eliminarRequest">
+  	<wsdl:part name="parameters" element="tns:eliminar"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eliminarResponse">
+  	<wsdl:part name="parameters" element="tns:eliminarResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="controlEmpleadosSalaRequest">
+  	<wsdl:part name="parameters" element="tns:controlEmpleadosSala"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="controlEmpleadosSalaResponse">
+  	<wsdl:part name="parameters" element="tns:controlEmpleadosSalaResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ControlPresencia">
+    <wsdl:operation name="registrar">
+      <wsdl:input message="tns:registrarRequest"/>
+      <wsdl:output message="tns:registrarResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar">
+    	<wsdl:input message="tns:eliminarRequest"></wsdl:input>
+    	<wsdl:output message="tns:eliminarResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="controlEmpleadosSala">
+    	<wsdl:input message="tns:controlEmpleadosSalaRequest"></wsdl:input>
+    	<wsdl:output message="tns:controlEmpleadosSalaResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="ControlPresenciaSOAP" type="tns:ControlPresencia">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    
+    <wsdl:operation name="registrar">
+      <soap:operation soapAction="http://www.example.org/ControlPresencia/registrar"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    
+        <wsdl:operation name="eliminar">
+      <soap:operation soapAction="http://www.example.org/ControlPresencia/eliminar"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    
+        <wsdl:operation name="controlEmpleadosSala">
+      <soap:operation soapAction="http://www.example.org/ControlPresencia/controlEmpleadosSala"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  
+  </wsdl:binding>
+  
+  <wsdl:service name="ControlPresencia">
+    <wsdl:port binding="tns:ControlPresenciaSOAP" name="ControlPresenciaSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

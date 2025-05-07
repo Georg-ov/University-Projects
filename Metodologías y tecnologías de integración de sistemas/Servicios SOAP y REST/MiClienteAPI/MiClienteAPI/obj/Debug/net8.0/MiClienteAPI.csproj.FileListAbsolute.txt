@@ -1,0 +1,17 @@
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\MiClienteAPI.exe
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\MiClienteAPI.deps.json
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\MiClienteAPI.runtimeconfig.json
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\MiClienteAPI.dll
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\MiClienteAPI.pdb
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.AssemblyInfo.cs
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClient.639A5A8C.Up2Date
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.dll
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\refint\MiClienteAPI.dll
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.pdb
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\MiClienteAPI.genruntimeconfig.cache
+C:\Users\georg\source\repos\MiClienteAPI\MiClienteAPI\obj\Debug\net8.0\ref\MiClienteAPI.dll

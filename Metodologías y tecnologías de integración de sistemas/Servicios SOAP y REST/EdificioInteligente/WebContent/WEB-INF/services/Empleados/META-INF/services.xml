@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.3  Built on : Jun 27, 2015 (11:17:49 BST) --><serviceGroup>
+    <service name="Empleados">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="org.example.www.empleados.EmpleadosMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">org.example.www.empleados.EmpleadosSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="modificar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/Empleados/">
+            <actionMapping>http://www.example.org/Empleados/modificar</actionMapping>
+            <outputActionMapping>http://www.example.org/Empleados/Empleados/modificarResponse</outputActionMapping>
+        </operation>
+        <operation name="consultar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/Empleados/">
+            <actionMapping>http://www.example.org/Empleados/consultar</actionMapping>
+            <outputActionMapping>http://www.example.org/Empleados/Empleados/consultarResponse</outputActionMapping>
+        </operation>
+        <operation name="nuevo" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/Empleados/">
+            <actionMapping>http://www.example.org/Empleados/nuevo</actionMapping>
+            <outputActionMapping>http://www.example.org/Empleados/Empleados/nuevoResponse</outputActionMapping>
+        </operation>
+        <operation name="borrar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/Empleados/">
+            <actionMapping>http://www.example.org/Empleados/borrar</actionMapping>
+            <outputActionMapping>http://www.example.org/Empleados/Empleados/borrarResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

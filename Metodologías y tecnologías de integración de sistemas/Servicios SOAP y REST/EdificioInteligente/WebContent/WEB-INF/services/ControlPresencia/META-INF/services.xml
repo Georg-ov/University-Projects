@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.3  Built on : Jun 27, 2015 (11:17:49 BST) --><serviceGroup>
+    <service name="ControlPresencia">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="org.example.www.controlpresencia.ControlPresenciaMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">org.example.www.controlpresencia.ControlPresenciaSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="registrar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/ControlPresencia/">
+            <actionMapping>http://www.example.org/ControlPresencia/registrar</actionMapping>
+            <outputActionMapping>http://www.example.org/ControlPresencia/ControlPresencia/registrarResponse</outputActionMapping>
+        </operation>
+        <operation name="eliminar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/ControlPresencia/">
+            <actionMapping>http://www.example.org/ControlPresencia/eliminar</actionMapping>
+            <outputActionMapping>http://www.example.org/ControlPresencia/ControlPresencia/eliminarResponse</outputActionMapping>
+        </operation>
+        <operation name="controlEmpleadosSala" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.example.org/ControlPresencia/">
+            <actionMapping>http://www.example.org/ControlPresencia/controlEmpleadosSala</actionMapping>
+            <outputActionMapping>http://www.example.org/ControlPresencia/ControlPresencia/controlEmpleadosSalaResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>
