@@ -1,0 +1,19 @@
+{
+  "name": "FREEWORLD",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@coinbase/coinbase-sdk": "^0.9.1",
+    "coinbase-commerce-node": "^1.0.4",
+    "firebase": "^10.14.1"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "sinon": "^19.0.2"
+  }
+}
