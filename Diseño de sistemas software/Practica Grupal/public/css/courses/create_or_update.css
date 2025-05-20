@@ -1,0 +1,228 @@
+.form-container {
+    background-color: rgba(var(--bs-dark-rgb));
+    margin-top: 3.5em;
+    padding: 20px 40px 20px 40px;
+    border-radius: 5px;
+}
+
+.text-title {
+    color: white !important;
+    font-family: "Orbitron", sans-serif;
+}
+
+.text-label {
+    color: white !important;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+}
+
+#description {
+    height: 220px;
+}
+
+.form-control,
+.form-select {
+    background-color: transparent !important;
+}
+
+.select-option {
+    color: #f06e9c !important;
+}
+
+.custom-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom-row {
+    display: flex;
+    justify-content: center;
+}
+
+.img-upload {
+    width: 100%;
+}
+
+/* Botones Update y Delete */
+.btn-custom-success,
+.btn-custom-danger {
+    color: #fff;
+    background-color: #292c2f;
+    border-color: #292c2f;
+}
+
+.brand-img {
+    width: 100%;
+    height: 3rem;
+}
+
+.search-bar {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Hover botones Update y Delete */
+.btn-custom-success:hover,
+.btn-custom-danger:hover {
+    color: #fff;
+    background-color: #ffb4b0;
+    border-color: #292c2f;
+}
+
+/* Estilo de Paginación */
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: 10px;
+    line-height: 1.42857143;
+    color: #000000;
+    font-family: "Noto Serif Lao", serif;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #ffb4b0;
+    border: 1px solid #c0c0c0;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    background-color: #006e8c;
+    border-color: #c0c0c0;
+    cursor: default;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #006e8c;
+    border-color: #c0c0c0;
+}
+
+/* Barra de búsqueda Admin */
+.custom-search-form {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.custom-search-input {
+    flex-grow: 1;
+}
+
+.custom-search-button {
+    margin-left: 5px;
+    color: #e93578;
+    border-color: #e93578;
+}
+
+.custom-search-button:hover {
+    color: #fff;
+    background-color: #e93578;
+    border-color: #e93578;
+}
+
+.btn-update {
+    color: #e93578;
+    border-color: #e93578;
+}
+
+.btn-update:hover {
+    color: #fff;
+    background-color: #e93578;
+    border-color: #e93578;
+}
+
+.card {
+    padding: 30px 40px;
+    margin: 40px 0;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue-text {
+    color: #00bcd4;
+}
+
+.form-control-label {
+    margin-bottom: 0;
+}
+
+.btn-custom-admin {
+    color: #fff;
+    border-color: #aaaaaa;
+    background: -webkit-linear-gradient(to right, #d79292, #60a9bd);
+    background: linear-gradient(to right, #d79292, #60a9bd);
+    height: 90px;
+    width: 250px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.btn-custom-admin:hover {
+    color: #fff;
+    border-color: #e93578;
+}
+
+hr.solid {
+    color: #000000;
+}
+
+.gradient-custom-2 {
+    background: #6aa7b9;
+
+    background: -webkit-linear-gradient(
+        to right,
+        #d79292,
+        #d79292,
+        #939faa,
+        #6aa7b9
+    );
+
+    background: linear-gradient(to right, #d79292, #d79292, #939faa, #6aa7b9);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+}
+
+.custom-input input.form-control {
+    background-color: #282c2f;
+    border-color: #aaaaaa;
+    height: 50px;
+}
+
+.custom-input input.form-control:focus {
+    border-color: #aaaaaa;
+}
+
+.custom-input .invalid-feedback {
+    color: #f7f6f6;
+}
+
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+    background-color: transparent;
+}

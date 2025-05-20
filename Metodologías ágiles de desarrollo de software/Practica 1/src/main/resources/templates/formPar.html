@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<head>
+    <title>Formulario numero par</title>
+</head>
+<form th:action="@{/formPar}" th:object="${numberData}" method="post">
+    <h1 style="color:blue">Descubre si tu numero es PAR!!!</h1>
+    <table>
+        <tr>
+            <td>Introduce tu numero:</td>
+            <td><input type="number" th:field="*{numero}" /></td>
+            <td style="color:red" th:if="${#fields.hasErrors('numero')}" th:errors="*{numero}"></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Enviar</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

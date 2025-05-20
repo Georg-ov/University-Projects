@@ -1,0 +1,174 @@
+﻿.panel {
+    background-color: #f8f8f8; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    width: 400px; 
+    margin: auto; 
+}
+
+    .panel .label,
+    .panel .textbox,
+    .panel .button {
+        display: block; 
+        margin-bottom: 10px; 
+    }
+
+    .panel .textbox {
+        width: 100%; 
+        padding: 5px; 
+    }
+
+    .panel .button {
+        background-color: #4CAF50; 
+        border: none; 
+        color: white; 
+        padding: 10px 20px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer; 
+        transition-duration: 0.4s; 
+    }
+
+        .panel .button:hover {
+            background-color: #45a049; 
+        }
+
+.button-outside {
+    background-color: #008CBA; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; /
+    margin: 4px 2px; 
+    cursor: pointer; 
+    transition-duration: 0.4s; 
+}
+
+    .button-outside:hover {
+        background-color: #007B8A; 
+    }
+
+/*Estilos para los productos*/
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap-title-section {
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    //color: green;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.column-2.carta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.plato-carta {
+    display: flex;
+    align-items: center;
+    border: 3px solid #e5e5e5;
+    border-radius: 25px;
+}
+
+.id-plato-carta {
+    margin-left: 20px;
+}
+.img-plato-carta {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+}
+
+    .img-plato-carta img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+.title-plato-carta {
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-top: none;
+    flex-basis: 60%;
+    padding: 0 1rem;
+    width: 100%;
+    display: grid;
+}
+
+    .title-plato-carta p {
+        color: black
+    }
+
+.precio-plato-carta {
+    display: flex;
+    flex-basis: 15%;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-carta {
+    display: flex;
+    align-items: center;
+    border: 3px solid #e5e5e5;
+    border-radius: 25px;
+}
+
+.img-menu-carta {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+}
+
+    .img-menu-carta img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+.title-menu-carta {
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-top: none;
+    flex-basis: 60%;
+    padding: 0 1rem;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+    .title-menu-carta p {
+        color: black
+    }
+
+.precio-menu-carta {
+    display: flex;
+    flex-basis: 15%;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cuadrado-blanco {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}

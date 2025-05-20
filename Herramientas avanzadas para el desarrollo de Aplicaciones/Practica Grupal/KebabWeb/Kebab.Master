@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kebab.master.cs" Inherits="KebabWeb.Kebab" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/kebabmain.css">
+    
+    <title>Pagina web basica</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="head">
+            <div class="logo">
+
+                <button type="button" onclick="window.location.href='/Default.aspx'">
+                    <img src="/assets/images/logo1_2.png" alt="Kebab Amigo">
+                </button>
+            
+            </div>
+            <nav class="navbar">
+                <asp:HyperLink ID="boton1" runat="server" CssClass="boton-nav" NavigateUrl="~/core/Mapa.aspx" Text ="Mapa" />
+                <asp:HyperLink ID="boton2" runat="server" CssClass="boton-nav" NavigateUrl="~/Default.aspx" Text ="Inicio" />
+                <asp:HyperLink ID="boton3" runat="server" CssClass="boton-nav" NavigateUrl="~/core/Productos.aspx" Text ="Productos" />
+                <asp:HyperLink ID="boton4" runat="server" CssClass="boton-nav" NavigateUrl="#contacto" Text ="Contacto" />
+                <asp:HyperLink ID="boton5" runat="server" CssClass="boton-nav" NavigateUrl="~/core/SobreNosotros.aspx" Text ="Nosotros" />
+                <!--<a href="#">Precio</a>-->
+                 <div>
+                    <ul class="wrapper">
+                        <li class="icon facebook">
+                            <a class="boton-nav" href="https://www.facebook.com/profile.php?id=100092536685523" target="_blank">
+                                <span><i class="bi bi-facebook"></i></span>
+                            </a>
+                        </li>
+                        <li class="icon twitter">
+                            <a class="boton-nav" href="https://twitter.com/KebabAmigo25" target="_blank">                       
+                                <span><i class="bi bi-twitter"></i></span>
+                            </a>
+                        </li>
+                        <li class="icon instagram">
+                            <a class="boton-nav" href="https://www.instagram.com/kebabamigo_sl/" target="_blank">
+                                <span><i class="bi bi-instagram"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Inicio y registro -->
+                <div class="login-register">
+                    <asp:HyperLink ID="inicio_sesion" runat="server" class="login-btn" CssClass="boton-nav" NavigateUrl="~/core/Login.aspx" Text ="Login/Register" />
+                </div>
+            </nav>
+
+           <div id="contactSlider" class="contact-slider">
+                <div class="slider-content">
+                    <button id="closeSlider" class="close-slider-btn">&times;</button>
+                        <h2>Contacto</h2>
+                <div class="info-container">
+                    <div class="info-item">
+                        <p>Horario</p>
+                        <p>24h</p>
+                    </div>
+                    <div class="info-item">
+                        <p>Número</p>
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="tel:+34 673543112" class="call-btn">+673543112</a>
+                    </div>
+                    <div class="info-item">
+                        <p>Dirección</p>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <a href="https://www.google.com/maps/place/Tu+Dirección" class="location-btn" target="_blank">C/ Alicante, 84, bajo 2 | SVDR, AL 03690</a>
+                    </div>
+                    <div class="info-item">
+                        <p>Email</p>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:amigo@kebab.com" class="email-btn">Enviar mensaje</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <div id="overlay" class="overlay"></div>
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>KEBAB AMIGO</p>
+            <p>C/ Alicante, 84, bajo 2 | SVDR, AL 03690</p>
+            <p>212.260.1212 | 212.260.7049</p>
+        </div>
+        <nav class="footer-navbar">
+            <asp:HyperLink NavigateUrl="~/Default.aspx" runat="server">Inicio</asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/core/SobreNosotros.aspx" runat="server">Nosotros</asp:HyperLink>
+            <asp:HyperLink NavigateUrl="#" runat="server">Contacto</asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/core/Productos.aspx" runat="server">Productos</asp:HyperLink>
+        </nav>
+
+            <div class="footer-image">
+                <img src= "/assets/images/premio1.png" alt="Premio del restaurante">
+            </div>
+
+        <div>
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <asp:HyperLink NavigateUrl="https://www.facebook.com/profile.php?id=100092536685523" Target="_blank" runat="server">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="bi bi-facebook"></i></span>
+                    </asp:HyperLink>
+                </li>
+                <li class="icon twitter">
+                    <asp:HyperLink NavigateUrl="https://twitter.com/KebabAmigo25" Target="_blank" runat="server">
+                        <span class="tooltip">Twitter</span>
+                        <span><i class="bi bi-twitter"></i></span>
+                    </asp:HyperLink>
+                </li>
+                <li class="icon instagram">
+                    <asp:HyperLink NavigateUrl="https://www.instagram.com/kebabamigo_sl/" Target="_blank" runat="server">
+                        <span class="tooltip">Instragram</span>
+                        <span><i class="bi bi-instagram"></i></span>
+                    </asp:HyperLink>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    </footer>
+
+    <!-- Esto es para el slider -->
+    <script>
+        document.querySelector(".navbar a[href='#contacto']").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("contactSlider").classList.toggle("open");
+            document.querySelector(".main-content").classList.toggle("blur"); 
+        });
+
+        document.getElementById('closeSlider').addEventListener('click', function () {
+            document.getElementById('contactSlider').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('open');
+            document.querySelector('.main-content').classList.remove('blur');
+        });
+    </script>
+
+    
+
+</body>
+
+</html>

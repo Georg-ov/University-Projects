@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.container-local {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+    border-bottom:ridge;
+}

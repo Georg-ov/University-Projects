@@ -1,0 +1,64 @@
+﻿
+h3 {
+    text-align: center;
+}
+
+.about-us {
+    text-align: center;
+}
+.description {
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.header { /*borrar, nuevo css*/
+    height: 60vh !important;
+    background: url(/assets/images/w1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-us {
+    color: black;
+    font-size: 30px;
+}
+
+.description {
+    color: #583434;
+    font-size: 25px;
+}
+
+.horizontal-container {
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+    .button-container button {
+        margin: 0 10px;
+    }
+
+.horario-title {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #583434;
+}
+
+.horario-text {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 14px;
+    text-align: -webkit-center;
+}
+
+.phone {
+    flex: 1;
+    margin-top: 50px;
+}
